@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University Student Registration</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        #header {
+            text-align: center;
+            background-color: blue;
+            color: white;
+            padding: 20px;
+        }
+        #registration-form {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            width: 400px;
+            margin: 0 auto;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #3ec942;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+        }
+        input[type="submit"]:hover {
+            background-color: #035808;
+            transition: all 0.2s linear;
+            scale: 115%;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <img src="uet-logo.png" alt="University Logo">
+        <h1>University of Engineering and Technology Lahore</h1>
+    </div>
+    <div id="registration-form">
+        <form>
+            <label for="student-name">Student Name:</label>
+            <input type="text" id="student-name" name="student-name" required>
+            <label for="father-name">Father Name:</label>
+            <input type="text" id="father-name" name="father-name" required>
+            <label for="cnic">CNIC:</label>
+            <input type="text" id="cnic" name="cnic" required>
+            <label for="contact-number">Contact Number:</label>
+            <input type="text" id="contact-number" name="contact-number" required>
+            <label for="fsc-marks">FSC Marks:</label>
+            <input type="number" id="fsc-marks" name="fsc-marks" required>
+            <label for="entry-test-marks">Entry Test Marks:</label>
+            <input type="number" id="entry-test-marks" name="entry-test-marks" required>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <label for="student-remarks">Student Remarks:</label>
+            <textarea id="student-remarks" name="student-remarks"></textarea>
+            <label for="student-preferences">Student Preferences:</label>
+            <input type="text" id="student-preferences" name="student-preferences">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
