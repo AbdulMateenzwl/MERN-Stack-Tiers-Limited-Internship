@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Student Registration</h1>
+    <form>
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="rollNo">Roll No.:</label>
+        <input type="text" id="rollNo" required>
+
+        <label for="matricMarks">Matric Marks:</label>
+        <input type="number" id="matricMarks" required>
+
+        <label for="fscMarks">FSC Marks:</label>
+        <input type="number" id="fscMarks" required>
+
+        <label for="entryTestMarks">Entry Test Marks:</label>
+        <input type="number" id="entryTestMarks" required>
+
+        <button type="button" onclick="calculateAggregate()">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

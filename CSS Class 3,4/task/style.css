@@ -1,0 +1,170 @@
+:root{
+    --primary-color: rgb(31, 184, 255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(45, 45, 59);
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li{
+    margin-left: 30px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.menu ul li a:hover{
+    color: var(--primary-color) ;
+}
+
+
+#nav-bar{
+    margin-top: 5px;
+    display: flex;
+}
+
+#bars{
+    display: none;
+    
+}
+
+.white-color{
+    color: white;
+}
+
+.hamburger-menu{
+    padding: 10px;
+}
+
+/* main menu */
+
+.main-menu{
+    display: flex;
+    height: 100vh;
+}
+
+.info{
+    padding-left: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color:  white;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.info label{
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 40px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: fit-content;
+}
+.info h1{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 55px;
+}
+.work{
+    margin: 5px 0px;
+    font-size: 35px;
+}
+
+.social-media{
+    margin-top: 20px;
+    display: flex;
+    
+}
+
+.social-media a{
+    margin-right: 20px;
+    color: white;
+}
+
+.my-img-div{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#first-img{
+    width: 300px;
+    height: 300px;
+    border-radius: 900px;
+}
+
+#second-img{
+    width: 300px;
+    height: 300px;
+    border-radius: 900px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+
+@media only screen and (max-width:600px){
+    .menu{
+        display: none;
+    }
+    #bars{
+        display: block;
+        margin: 5px;
+        font-size:large;
+    }
+    
+}
+
+@media only screen and (max-width:800px){
+    .main-menu{
+        flex-direction: column;
+    }
+    .info{
+        width: 100vw;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 10vh;
+        padding-top: 45vh;
+        background-image: url('images/dp.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: auto;
+    }
+    .my-img-div{
+        width: 100%;
+        margin-top: 40px;
+    }
+    #second-img{
+        display: block;
+    }
+    #first-img{
+        display: none;
+    }
+    .info{
+        color: black;
+    }
+    .white-color{
+        color: black;
+    }
+}
