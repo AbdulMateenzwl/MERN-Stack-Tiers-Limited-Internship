@@ -85,18 +85,20 @@ body{
     font-weight: bold;
     font-size: 55px;
 }
-.work{
+#work{
     margin: 5px 0px;
     font-size: 35px;
 }
 
-.social-media{
+#social-media{
     margin-top: 20px;
     display: flex;
-    
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
 }
 
-.social-media a{
+#social-media a{
     margin-right: 20px;
     color: white;
 }
@@ -109,8 +111,8 @@ body{
 }
 
 #first-img{
-    width: 300px;
-    height: 300px;
+    width: 50vh;
+    height: 50vh;
     border-radius: 900px;
 }
 
@@ -130,41 +132,85 @@ body{
     #bars{
         display: block;
         margin: 5px;
-        font-size:large;
+        font-size: 25px;
+        color: white;
     }
-    
+
+    #details-info{
+        height: 30px;
+    }
+
 }
 
 @media only screen and (max-width:800px){
-    .main-menu{
-        flex-direction: column;
-    }
     .info{
         width: 100vw;
         padding-left: 30px;
         padding-right: 30px;
-        padding-bottom: 10vh;
-        padding-top: 45vh;
+        padding-bottom: 5vh;
         background-image: url('images/dp.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         margin-right: auto;
+        justify-content: end;
     }
     .my-img-div{
-        width: 100%;
-        margin-top: 40px;
-    }
-    #second-img{
-        display: block;
-    }
-    #first-img{
         display: none;
     }
     .info{
         color: black;
+        height: 100vh;
     }
     .white-color{
         color: black;
+    }
+    #nav-bar{
+        position: absolute;
+    }
+    #info-data{
+        background: rgba(255, 255, 255, 0.26);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        border: 1px solid rgba(255, 255, 255, 0.56);
+        padding: 15px;
+        padding-top: 22px;
+    }
+    #my-name{
+        font-size: 40px;
+    }
+
+    #work{
+        font-size: 25px;
+    }
+    
+    #details-info{
+        height: 80px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        font-size: small;
+        border: .3px solid black;
+        padding: 2px 4px;
+        border-radius: 5px;
+    }
+
+    #details-info::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    #details-info::-webkit-scrollbar:horizontal {
+        /* height: 11px; */
+        display: none;
+    }
+    
+    #details-info::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 2px solid black; 
+        background-color: rgba(0, 0, 0, .5);
+    }
+    #social-media{
+        margin-top: 5px;
     }
 }
