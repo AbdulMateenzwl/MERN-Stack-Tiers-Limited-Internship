@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>View Students</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Aggregates</h1>
+
+    <table>
+        <tr>
+            <th>Student Name</th>
+            <th>Aggregate</th>
+        </tr>
+        <tbody id="studentTableBody"></tbody>
+    </table>
+
+    <script>
+        // Retrieve data from localStorage and display in the table
+        window.addEventListener('DOMContentLoaded', () => {
+            const students = JSON.parse(localStorage.getItem('students'));
+            if (students && students.length > 0) {
+                const tableBody = document.getElementById('studentTableBody');
+                students.forEach(student => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${student.name}</td>
+                        <td>${student.aggregate}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
